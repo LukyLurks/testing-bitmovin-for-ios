@@ -15,7 +15,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.luckner2.testingbitmovinonios"
     },
     "android": {
       "adaptiveIcon": {
@@ -25,6 +26,29 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "9298e054-5ee1-4921-ac18-59ecd6f8b985"
+      }
+    },
+    "plugins": [
+      "./withBitmovinDependencies.js",
+      "expo-build-properties",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "compileSdkVersion": 33,
+            "targetSdkVersion": 33,
+            "buildToolsVersion": "33.0.0"
+          },
+          "ios": {
+            "deploymentTarget": "14.0",
+            "useFrameworks": "static"
+          }
+        }
+      ]
+    ]
   }
 }
