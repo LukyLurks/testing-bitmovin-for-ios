@@ -29,7 +29,7 @@ module.exports = (config) => {
         join(platformProjectRoot, "Podfile"),
         contents.replace(
           /((?:^require .*\n\s*))(?!(?:^require))/m,
-          `$1\nsource 'https://github.com/bitmovin/cocoapod-specs.git'\n\n`
+          `$1\nsource 'https://github.com/bitmovin/cocoapod-specs.git'\nsource 'https://github.com/react-native-tvos/react-native-tvos-podspecs.git'\nsource 'https://github.com/CocoaPods/Specs.git'\n`
         )
       );
       return config;
